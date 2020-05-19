@@ -1,0 +1,17 @@
+<div class="header">
+    <div class="prefix">
+        address
+    </div>
+    <div class="subfirx">
+        date
+    </div>
+</div>
+
+<div class="content">
+    <div class="list">
+        <div class="item" *ngFor="let item of data">
+            <div class="img"[ngStyle]="{'background-image':'url('+item.img+')'}">
+            </div>
+        </div>
+    </div>
+</div>
