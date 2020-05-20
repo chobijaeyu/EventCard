@@ -1,0 +1,52 @@
+\:host
+    width: 20rem
+
+.header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 1rem
+
+.wrap
+    width: 20rem
+    transition: 1s cubic-bezier(.17,.67,.83,.67)
+.content
+    margin-bottom: 25px
+    width: 80%
+    height: 20rem
+    flex: 1
+.listwrap
+    height: 100%
+    padding-left: 1rem
+    .list
+        position: relative
+        height: 100%
+        .item
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            transform-origin: right center
+            will-change: transform, opacity
+            transition: transform 250ms cubic-bezier(0, 0, 0.2, 1)
+            .img
+                background-size: cover
+                background-repeat: no-repeat
+                background-position: center center
+                width: 100%
+                height: 100%
+                will-change: box-shadow
+                border-radius: 20px
+                overflow: hidden
+
+.cdk-drag-preview
+    box-sizing: border-box
+    border-radius: 4px
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12)
+
+.cdk-drag-placeholder
+    opacity: 0
+
+.cdk-drag-animating
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1)

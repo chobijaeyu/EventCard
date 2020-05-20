@@ -1,16 +1,22 @@
-<div class="header">
-    <div class="prefix">
-        address
+<div class="wrap">
+    <div class="header">
+        <div class="prefix">
+            address
+        </div>
+        <div class="subfirx">
+            date
+        </div>
     </div>
-    <div class="subfirx">
-        date
-    </div>
-</div>
 
-<div class="content">
-    <div class="list">
-        <div class="item" *ngFor="let item of data">
-            <div class="img"[ngStyle]="{'background-image':'url('+item.img+')'}">
+    <div class="content">
+        <div class="listwrap">
+            <div class="list">
+                <div class="item" *ngFor="let item of q1._queue;let currentIndex = index;" cdkDrag cdkDragLockAxis="x"
+                    (cdkDragMoved)="ondrag($event,currentIndex)" (cdkDragEnded)="onDragEnded($event)"
+                    [ngStyle]="{'transform': transf(currentIndex), 'opacity':opacity(currentIndex),'z-index':zindex(currentIndex)}">
+                    <div class="img" [ngStyle]="{'background-image':'url('+item.img+')'}">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
